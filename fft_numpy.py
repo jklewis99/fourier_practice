@@ -35,6 +35,8 @@ def main():
     swap_inverse2 = np.fft.ifft2(im2_phase_im1_magnitude)
 
     # place to display images and compare
+    plt.figure(figsize=(15, 6))
+
     plt.subplot(2, 5, 1)
     show_image(im1, 'Image 1')
     plt.subplot(2, 5, 6)
@@ -62,6 +64,7 @@ def main():
     show_image(np.absolute(im2_phase_im1_magnitude),
                'Phase image 2, magnitude image 1')
 
+    plt.savefig('output.png')
     plt.show()
 
 
